@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -9,6 +9,8 @@ export class HomeComponent implements OnInit {
   title = 'Home title';
   url = 'http://www.google.com';
   @Input() name;
+  @Output()
+  gotoClick: EventEmitter<string> = new EventEmitter();
 
   constructor() {}
 
@@ -16,5 +18,6 @@ export class HomeComponent implements OnInit {
 
   onButtonClick() {
     alert(this.url);
+    this.gotoClick.emit(this.url);
   }
 }

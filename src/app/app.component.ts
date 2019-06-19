@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ngweb';
+
+  onGotoClick(value1: string) {
+    alert(value1);
+  }
 }
