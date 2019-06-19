@@ -12,6 +12,12 @@ export class HomeComponent implements OnInit {
   @Output()
   gotoClick: EventEmitter<string> = new EventEmitter();
 
+  showContent = true;
+  items = ['One', 'Two', 'Three', 'Four'];
+
+  conditionExp = 'A';
+  exp1 = 'A';
+
   constructor() {}
 
   ngOnInit() {}
@@ -19,5 +25,9 @@ export class HomeComponent implements OnInit {
   onButtonClick() {
     alert(this.url);
     this.gotoClick.emit(this.url);
+  }
+
+  onToggle() {
+    this.showContent = !this.showContent;
   }
 }
