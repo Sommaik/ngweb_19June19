@@ -10,7 +10,8 @@ import { FormGroupComponent } from './page/form-group/form-group.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HighlightDirective } from './highlight.directive';
 import { TrimCreditCardPipe } from './shared/trim-credit-card.pipe';
-
+import { HttpClientModule } from '@angular/common/http';
+import { PostListComponent } from './page/post-list/post-list.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,14 +19,16 @@ import { TrimCreditCardPipe } from './shared/trim-credit-card.pipe';
     FormComponent,
     FormGroupComponent,
     HighlightDirective,
-    TrimCreditCardPipe
+    TrimCreditCardPipe,
+    PostListComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
