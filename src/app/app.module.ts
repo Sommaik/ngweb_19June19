@@ -12,6 +12,8 @@ import { HighlightDirective } from './highlight.directive';
 import { TrimCreditCardPipe } from './shared/trim-credit-card.pipe';
 import { HttpClientModule } from '@angular/common/http';
 import { PostListComponent } from './page/post-list/post-list.component';
+import { PublicZoneComponent } from './page/public-zone/public-zone.component';
+import { PrivateZoneComponent } from './page/private-zone/private-zone.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +22,9 @@ import { PostListComponent } from './page/post-list/post-list.component';
     FormGroupComponent,
     HighlightDirective,
     TrimCreditCardPipe,
-    PostListComponent
+    PostListComponent,
+    PublicZoneComponent,
+    PrivateZoneComponent
   ],
   imports: [
     BrowserModule,
