@@ -14,6 +14,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { PostListComponent } from './page/post-list/post-list.component';
 import { PublicZoneComponent } from './page/public-zone/public-zone.component';
 import { PrivateZoneComponent } from './page/private-zone/private-zone.component';
+import { LoginComponent } from './page/login/login.component';
+import { RegisterComponent } from './page/register/register.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +26,9 @@ import { PrivateZoneComponent } from './page/private-zone/private-zone.component
     TrimCreditCardPipe,
     PostListComponent,
     PublicZoneComponent,
-    PrivateZoneComponent
+    PrivateZoneComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

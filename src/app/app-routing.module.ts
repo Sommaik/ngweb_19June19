@@ -5,6 +5,8 @@ import { HomeComponent } from './page/home/home.component';
 import { PostListComponent } from './page/post-list/post-list.component';
 import { FormComponent } from './page/form/form.component';
 import { FormGroupComponent } from './page/form-group/form-group.component';
+import { LoginComponent } from './page/login/login.component';
+import { RegisterComponent } from './page/register/register.component';
 
 const routes: Routes = [
   {
@@ -30,6 +32,14 @@ const routes: Routes = [
       {
         path: 'form-group',
         component: FormGroupComponent
+      },
+      {
+        path: 'login',
+        component: LoginComponent
+      },
+      {
+        path: 'register',
+        component: RegisterComponent
       }
     ]
   }

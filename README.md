@@ -4,6 +4,7 @@
   /form => FormCommponent
   /form-group => FormGroupComponent
   /login => LoginComponent
+  /register => RegisterComponent
 
 /admin = PrivateZone, AuthGuard
   /user => module
