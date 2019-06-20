@@ -7,6 +7,7 @@ import { FormComponent } from './page/form/form.component';
 import { FormGroupComponent } from './page/form-group/form-group.component';
 import { LoginComponent } from './page/login/login.component';
 import { RegisterComponent } from './page/register/register.component';
+import { PrivateZoneComponent } from './page/private-zone/private-zone.component';
 
 const routes: Routes = [
   {
@@ -40,6 +41,16 @@ const routes: Routes = [
       {
         path: 'register',
         component: RegisterComponent
+      }
+    ]
+  },
+  {
+    path: 'admin',
+    component: PrivateZoneComponent,
+    children: [
+      {
+        path: 'user',
+        loadChildren: '/module/user/user.module#UserModule'
       }
     ]
   }
