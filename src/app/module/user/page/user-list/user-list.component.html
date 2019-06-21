@@ -1,11 +1,18 @@
+<button (click)="onAddClick()" class="btn btn-link">Add new user</button>
 <table class="table">
   <tr>
+    <th></th>
     <th>id</th>
     <th>user id</th>
     <th>user name</th>
     <th>delete</th>
   </tr>
   <tr *ngFor="let user of users | async">
+    <td>
+      <button (click)="onEditClick(user.$loki)" class="btn btn-link">
+        Edit
+      </button>
+    </td>
     <td>{{ user.$loki }}</td>
     <td>{{ user.userId }}</td>
     <td>{{ user.name }}</td>

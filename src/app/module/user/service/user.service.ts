@@ -20,4 +20,17 @@ export class UserService {
       headers: header
     });
   }
+
+  updateUser(id: number, user: any): Observable<any> {
+    const header: HttpHeaders = new HttpHeaders({
+      Authorization: 'jwt ' + sessionStorage.getItem('APPTOKEN')
+    });
+    return this.http.put(`${environment.apiUrl}/user/${id}`, user, {
+      headers: header
+    });
+  }
+
+  getById(id: number): Observable<User> {
+    return this.http.get<User>(`${environment.apiUrl}/user/${id}`);
+  }
 }
