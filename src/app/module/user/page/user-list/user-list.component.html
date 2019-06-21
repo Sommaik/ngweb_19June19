@@ -1,3 +1,16 @@
-<p>
-  user-list works!
-</p>
+<table class="table">
+  <tr>
+    <th>id</th>
+    <th>user id</th>
+    <th>user name</th>
+    <th>delete</th>
+  </tr>
+  <tr *ngFor="let user of users | async">
+    <td>{{ user.$loki }}</td>
+    <td>{{ user.userId }}</td>
+    <td>{{ user.name }}</td>
+    <td>
+      <button (click)="onDelClick(user.$loki)" class="btn btn-link">Del</button>
+    </td>
+  </tr>
+</table>
