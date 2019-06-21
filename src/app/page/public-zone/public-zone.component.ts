@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-public-zone',
@@ -6,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./public-zone.component.css']
 })
 export class PublicZoneComponent implements OnInit {
+  constructor(private router: Router) {}
 
-  constructor() { }
+  ngOnInit() {}
 
-  ngOnInit() {
+  gotoTest() {
+    this.router.navigate(['admin', 'user', 'list']);
   }
-
 }

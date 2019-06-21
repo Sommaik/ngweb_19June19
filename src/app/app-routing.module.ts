@@ -8,6 +8,7 @@ import { FormGroupComponent } from './page/form-group/form-group.component';
 import { LoginComponent } from './page/login/login.component';
 import { RegisterComponent } from './page/register/register.component';
 import { PrivateZoneComponent } from './page/private-zone/private-zone.component';
+import { AuthGuard } from './shared/auth.guard';
 
 const routes: Routes = [
   {
@@ -47,10 +48,16 @@ const routes: Routes = [
   {
     path: 'admin',
     component: PrivateZoneComponent,
+    canActivate: [AuthGuard],
     children: [
       {
+        path: '',
+        redirectTo: 'user',
+        pathMatch: 'full'
+      },
+      {
         path: 'user',
-        loadChildren: '/module/user/user.module#UserModule'
+        loadChildren: './module/user/user.module#UserModule'
       }
     ]
   }

@@ -29,8 +29,12 @@ export class LoginComponent implements OnInit {
   onFormSubmit() {
     if (this.userForm.valid) {
       this.loginService.login(this.userForm.value).subscribe(result => {
-        console.log(result);
-        //
+        if (result.success) {
+          sessionStorage.setItem('APPTOKEN', result.token);
+          this.router.navigate(['admin']);
+        } else {
+          alert('login fail');
+        }
       });
     } else {
       alert('Please fill in user and password');
